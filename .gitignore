@@ -1,0 +1,36 @@
+# environments and caches
+.venv/
+**/.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.idea/
+
+# corpora, engine outputs and training data: fetched or generated, never committed
+experiments/datasets/
+experiments/results
+experiments/**/reports/
+experiments/finetune/train_data/
+experiments/finetune/out_*/
+experiments/finetune/inf_*/
+experiments/finetune/output/
+data/prepare/*_raw/
+
+training_logs/
+
+# weights
+*.pdparams
+*.pdiparams
+*.pdmodel
+*.pdopt
+*.pdstates
+
+# large and transient files
+*.tar
+*.tar.gz
+*.zip
+*.tif
+*.png
+*.jpg
+*.jpeg
+*.log

@@ -1,0 +1,20 @@
+[project]
+name = "long-s-fusion"
+version = "0.1.0"
+description = "Shared contract between the OCR providers"
+requires-python = ">=3.10"
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+# The shared contract only. Each provider lives in its own uv project.
+include = [
+    "providers/__init__.py",
+    "providers/base.py",
+    "providers/config.py",
+    "providers/schema.py",
+    "providers/worker.py",
+]

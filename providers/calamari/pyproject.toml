@@ -1,0 +1,16 @@
+[project]
+name = "provider-calamari"
+version = "0.1.0"
+description = "Isolated environment of the Calamari provider"
+requires-python = ">=3.10,<3.11"
+dependencies = [
+    "long-s-fusion",
+    "calamari-ocr==2.3.1",
+    "tensorflow[and-cuda]==2.15.1"
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+long-s-fusion = { path = "../..", editable = true }

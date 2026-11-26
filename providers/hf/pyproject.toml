@@ -1,0 +1,25 @@
+[project]
+name = "provider-hf"
+version = "0.1.0"
+description = "HuggingFace models used with no adaptation: TrOCR and Qwen2.5-VL"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "long-s-fusion",
+    "torch",
+    "torchvision",
+    # series 5 removed the conversion of TrOCR's slow tokenizer; 4.5x serves
+    # both models (Qwen2.5-VL comes in at 4.49)
+    "transformers>=4.51,<5",
+    "accelerate",
+    "qwen-vl-utils",
+    "pillow",
+    # TrOCR's tokenizer is slow and has to be converted
+    "sentencepiece",
+    "protobuf",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+long-s-fusion = { path = "../..", editable = true }

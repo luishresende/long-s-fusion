@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "long-s-fusion: long-s recovery in historical print by asymmetric fusion of OCR engines"
+type: software
+license: MIT
+repository-code: "https://github.com/luishresende/long-s-fusion"
+authors:
+  - family-names: "Resende"
+    given-names: "Luis Henrique da Silva"
+    orcid: "https://orcid.org/0009-0003-0951-7938"
+  - family-names: "Lopes"
+    given-names: "Rui Pedro"
+    orcid: "https://orcid.org/0000-0002-9170-5078"
+  - family-names: "Ribeiro"
+    given-names: "Beatriz Palma"
+    orcid: "https://orcid.org/0009-0008-0412-3020"
+  - family-names: "Bravo"
+    given-names: "Alexia Dotras"
+    orcid: "https://orcid.org/0000-0001-5851-765X"

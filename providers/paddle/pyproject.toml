@@ -1,0 +1,37 @@
+[project]
+name = "provider-paddle"
+version = "0.1.0"
+description = "Isolated environment of the PaddleOCR provider"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "long-s-fusion",
+    "paddleocr>=3.7.0",
+    "paddlepaddle-gpu==3.3.0",
+    "paddlex[ocr]",
+    # fusion/common.py: alignment and metrics for the whole project
+    "rapidfuzz",
+    # data/prepare/porto.py: PORTO is pulled from HuggingFace with load_dataset
+    "datasets",
+    # `paddlex --install` calls `python -m pip`, and uv does not put pip in the venv
+    "pip",
+    # ppocr training needs these, and paddlex does not pull them in
+    "scikit-image",
+    "albumentations",
+    "lmdb",
+    "ipykernel>=7.3.0",
+    "nbclient",
+    "nbformat",
+]
+
+[tool.uv]
+package = false
+
+# Paddle's official index for the GPU builds (CUDA 13.0).
+[[tool.uv.index]]
+name = "paddle-cu130"
+url = "https://www.paddlepaddle.org.cn/packages/stable/cu130/"
+explicit = true
+
+[tool.uv.sources]
+paddlepaddle-gpu = { index = "paddle-cu130" }
+long-s-fusion = { path = "../..", editable = true }

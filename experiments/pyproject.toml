@@ -1,0 +1,13 @@
+[project]
+name = "experiments"
+version = "0.1.0"
+description = "Collection and analysis of the 3-condition protocol"
+requires-python = ">=3.12"
+dependencies = [
+    "ipykernel>=7.3.0",
+    "pyspellchecker",
+    "rapidfuzz",
+]
+
+[tool.uv]
+package = false

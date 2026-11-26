@@ -1,0 +1,15 @@
+[project]
+name = "provider-kraken"
+version = "0.1.0"
+description = "Isolated environment of the Kraken provider"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "long-s-fusion",
+    "kraken",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+long-s-fusion = { path = "../..", editable = true }

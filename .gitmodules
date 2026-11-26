@@ -1,0 +1,3 @@
+[submodule "providers/calamari/models/calamari_models_experimental"]
+	path = providers/calamari/models/calamari_models_experimental
+	url = https://github.com/Calamari-OCR/calamari_models_experimental.git
